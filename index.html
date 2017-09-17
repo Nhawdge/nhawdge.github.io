@@ -10,6 +10,53 @@
 </head>
 
 <body>
+<script type="text/html" id="NetherCalcTemplate">
+    <div class="content">
+
+        <table class="table table-responsive">
+            <thead>
+                <tr>
+                    <th> Connection Name</th>
+                    <th> Over World X </th>
+                    <th> Over World Z </th>
+                    <th></th>
+                        <th> Nether X </th>
+                        <th> Nether Z </th>
+                </tr>
+            </thead>
+            <tbody data-bind="foreach: Coords">
+                <tr>
+                    <td>
+                        <input class="form-control" data-bind="value: Note">
+                    </td>
+
+                    <td>
+                        <input class="form-control" data-bind="value: OverWorldX">
+                    </td>
+                    <td>
+                        <input class="form-control" data-bind="value: OverWorldZ">
+                    </td>
+                    <td> = </td>
+                    <td>
+                        <input class="form-control" disabled data-bind="value: NetherX">
+                    </td>
+                    <td>
+                        <input class="form-control" disabled data-bind="value: NetherZ">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <a class="btn btn-default" data-bind="click: NewRow"> Add New Row</a>
+        <a class="btn btn-default pull-right" data-bind="click: Save"> Save</a>
+    </div>
+</script>
+
+<script type="text/html" id="BlogTemplate">
+    <div class="content">
+        Test stuff goes in here
+    </div>
+</script>
+
     <div class="container">
         <div class="jumbotron">
             <h1> Nhawdge.net</h1>
