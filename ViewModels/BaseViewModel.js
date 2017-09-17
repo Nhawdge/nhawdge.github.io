@@ -14,6 +14,7 @@ function BaseViewModel () {
     self.ShowAdmin = self.ChangeContent("Admin");
     self.ShowBreakout = self.ChangeContent("Breakout");
     self.ShowNetherCalc = self.ChangeContent("NetherCalc");
-}
+    self.ShowRecipeTool=self.ChangeContent("RecipeTool")
+}	
 
 
