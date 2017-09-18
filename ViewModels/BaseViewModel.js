@@ -1,11 +1,11 @@
-function BaseViewModel () {
+function BaseViewModel() {
     var self = this;
 
-    self.Content = ko.observable({name: "Blog"});
+    self.Content = ko.observable({ name: "BlogTemplate" });
 
-    self.ChangeContent = function(content) {
-        return function() {
-            self.Content({name: content});
+    self.ChangeContent = function (content) {
+        return function () {
+            self.Content({ name: content + "Template", data: content + "ViewModel" });
         }
     }
 
@@ -14,7 +14,15 @@ function BaseViewModel () {
     self.ShowAdmin = self.ChangeContent("Admin");
     self.ShowBreakout = self.ChangeContent("Breakout");
     self.ShowNetherCalc = self.ChangeContent("NetherCalc");
-    self.ShowRecipeTool=self.ChangeContent("RecipeTool")
-}	
+    self.ShowRecipeTool = self.ChangeContent("RecipeTool");
+
+    self.Load = function(){
+        self.ChangeContent("Blog");
+
+    }
+
+    self.Load();
+
+}
 
 
