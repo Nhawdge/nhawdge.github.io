@@ -3,20 +3,23 @@ function BaseViewModel() {
 
     self.Content = ko.observable({ name: "BlogTemplate" });
 
-    self.ChangeContent = function (content) {
+    self.ChangeContent = function (content,vm) {
         return function () {
-            self.Content({ name: content + "Template", data: content + "ViewModel" });
+            self.Content({
+                name: content + "Template",
+                data: vm
+            });
         }
     }
 
-    self.ShowBlog = self.ChangeContent("Blog");
-    self.ShowGymTracker = self.ChangeContent("GymTracker");
-    self.ShowAdmin = self.ChangeContent("Admin");
+    self.ShowBlog = self.ChangeContent("Blog", new BlogViewModel());
+    self.ShowGymTracker = self.ChangeContent("GymTracker", new GymTrackerViewModel());
+    self.ShowAdmin = self.ChangeContent("Admin", new AdminViewModel());
     self.ShowBreakout = self.ChangeContent("Breakout");
-    self.ShowNetherCalc = self.ChangeContent("NetherCalc");
+    self.ShowNetherCalc = self.ChangeContent("NetherCalc", new NetherCalcViewModel());
     self.ShowRecipeTool = self.ChangeContent("RecipeTool");
 
-    self.Load = function(){
+    self.Load = function () {
         self.ChangeContent("Blog");
 
     }

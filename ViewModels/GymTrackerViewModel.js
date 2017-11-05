@@ -7,8 +7,3 @@ function GymTrackerViewModel () {
 
     self.Load();
 }
-
-ko.components.register('GymTracker', {
-    viewModel: GymTrackerViewModel,
-    template: {element: 'GymTrackerTemplate'}
-})

@@ -30,8 +30,3 @@ function BlogViewModel () {
 
     self.Load();
 }
-
-ko.components.register('Blog', {
-    viewModel: BlogViewModel,
-    template: {element: 'BlogTemplate'}
-})
