@@ -37,6 +37,7 @@
                         <th></th>
                         <th> Nether X </th>
                         <th> Nether Z </th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody data-bind="foreach: Coords">
@@ -57,6 +58,11 @@
                         </td>
                         <td>
                             <input class="form-control" data-bind="disable: OverWorld,value: NetherZ">
+                        </td>
+                        <td>
+                            <a data-bind="click: $parent.RemoveRow"> 
+                                <strong class="btn btn-default"> X</strong>
+                            </a>
                         </td>
                     </tr>
                 </tbody>
