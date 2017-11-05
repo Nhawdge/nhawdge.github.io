@@ -1,5 +1,6 @@
-function Coords() {
+function FromOverWorldCoords() {
     var self = this;
+    self.OverWorld = ko.observable(true);
     self.OverWorldX = ko.observable(0);
     self.OverWorldZ = ko.observable(0);
 
@@ -13,15 +14,32 @@ function Coords() {
     self.Note = ko.observable("");
 }
 
+function FromNetherCoords() {
+    var self = this;
+    self.OverWorld = ko.observable(false);
+    self.NetherX = ko.observable(0);
+    self.NetherZ = ko.observable(0);
+
+    self.OverWorldX = ko.computed(function () {
+        return self.NetherX() * 8;
+    })
+    self.OverWorldZ = ko.computed(function () {
+        var out = 0;
+        return self.NetherZ() * 8;
+    })
+    self.Note = ko.observable("");
+}
+
 function NetherCalcViewModel() {
     var self = this;
 
     self.Coords = ko.observableArray();
 
-
-
-    self.NewRow = function () {
-        self.Coords.push(new Coords());
+    self.NewOverWorldRow = function () {
+        self.Coords.push(new FromOverWorldCoords());
+    }
+    self.NewNetherRow = function () {
+        self.Coords.push(new FromNetherCoords());
     }
 
     self.Save = function () {
@@ -40,7 +58,7 @@ function NetherCalcViewModel() {
         // Check cookies for data 
 
         //else 
-        self.Coords.push(new Coords());
+        self.Coords.push(new FromOverWorldCoords());
     }
     self.Load();
 }

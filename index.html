@@ -8,14 +8,14 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
     <!-- Global Site Tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107526852-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments)};
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107526852-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments) };
+        gtag('js', new Date());
 
-  gtag('config', 'UA-107526852-1');
-</script>
+        gtag('config', 'UA-107526852-1');
+    </script>
 
 </head>
 
@@ -46,22 +46,24 @@
                         </td>
 
                         <td>
-                            <input class="form-control" data-bind="value: OverWorldX">
+                            <input class="form-control" data-bind="enable: OverWorld, value: OverWorldX">
                         </td>
                         <td>
-                            <input class="form-control" data-bind="value: OverWorldZ">
+                            <input class="form-control" data-bind="enable: OverWorld,value: OverWorldZ">
                         </td>
                         <td> = </td>
                         <td>
-                            <input class="form-control" disabled data-bind="value: NetherX">
+                            <input class="form-control" data-bind="disable: OverWorld,value: NetherX">
                         </td>
                         <td>
-                            <input class="form-control" disabled data-bind="value: NetherZ">
+                            <input class="form-control" data-bind="disable: OverWorld,value: NetherZ">
                         </td>
                     </tr>
                 </tbody>
             </table>
-            <a class="btn btn-default" data-bind="click: NewRow"> Add New Row</a>
+            <a class="btn btn-default" data-bind="click: NewOverWorldRow"> Add New Overworld Row</a>
+            <a class="btn btn-default" data-bind="click: NewNetherRow"> Add New Nether Row</a>
+            
             <a class="btn btn-default pull-right" data-bind="click: Save"> Save</a>
         </div>
     </script>
@@ -90,7 +92,8 @@
                             <!-- <li><a href="#">Page 1</a></li> -->
                             <li class="dropdown">
                                 <a class="dropdown-toggle" data-toggle="dropdown">
-                                    Projects <span class="caret"></span>
+                                    Projects
+                                    <span class="caret"></span>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li data-bind="css: { active: Content().name == 'GymTracker' }">
@@ -130,7 +133,7 @@
 <script src="ViewModels/NetherCalcViewModel.js"></script>
 
 <script>
-    ko.applyBindings(new BaseViewModel());
+        ko.applyBindings(new BaseViewModel());
 </script>
 
 </html>
