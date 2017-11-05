@@ -42,6 +42,10 @@ function NetherCalcViewModel() {
         self.Coords.push(new FromNetherCoords());
     }
 
+    self.RemoveRow = function (row) {
+        self.Coords.remove(row);
+    }
+
     self.Save = function () {
         try {
             let data = JSON.stringify(ko.toJS(self.Coords));
@@ -56,9 +60,22 @@ function NetherCalcViewModel() {
 
     self.Load = function () {
         // Check cookies for data 
-
-        //else 
-        self.Coords.push(new FromOverWorldCoords());
+        var cookies = document.cookie.split(';')
+        var nethercalc = cookies.find(function (e) { return e.split('=')[0] == ' NetherCalc' })
+        if (nethercalc) {
+            var coords = eval(nethercalc.split("=")[1]);
+            for (i in coords) {
+                if (coords[i].OverWorld) {
+                    self.Coords.push(new FromOverWorldCoords(coords[i]))
+                }
+                else {
+                    self.Coords.push(new FromNetherCoords(coords[i]))
+                }
+            }
+        }
+        else {
+            self.Coords.push(new FromOverWorldCoords());
+        }
     }
     self.Load();
 }
