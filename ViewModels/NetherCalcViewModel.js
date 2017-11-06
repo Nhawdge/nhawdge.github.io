@@ -11,7 +11,7 @@ function FromOverWorldCoords(data) {
         var out = 0;
         return self.OverWorldZ() / 8;
     })
-    self.Note = ko.observable("");
+    self.Note = ko.observable(data ? data.Note ? "");
 }
 
 function FromNetherCoords(data) {
@@ -27,7 +27,7 @@ function FromNetherCoords(data) {
         var out = 0;
         return self.NetherZ() * 8;
     })
-    self.Note = ko.observable("");
+    self.Note = ko.observable(data ? data.Note ? "");
 }
 
 function NetherCalcViewModel() {
