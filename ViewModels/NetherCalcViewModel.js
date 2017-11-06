@@ -60,7 +60,9 @@ function NetherCalcViewModel() {
     self.Load = function () {
         // Check cookies for data 
         var cookies = document.cookie.split(';')
-        var nethercalc = cookies.find(function (e) { return e.split('=')[0] == ' NetherCalc' })
+        var nethercalc = cookies.find(function (e) {
+            return e.split('=')[0].match(/NetherCalc/i)
+        })
         if (nethercalc) {
             var coords = eval(nethercalc.split("=")[1]);
             for (i in coords) {
