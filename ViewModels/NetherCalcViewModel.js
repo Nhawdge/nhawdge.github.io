@@ -1,8 +1,8 @@
-function FromOverWorldCoords() {
+function FromOverWorldCoords(data) {
     var self = this;
     self.OverWorld = ko.observable(true);
-    self.OverWorldX = ko.observable(0);
-    self.OverWorldZ = ko.observable(0);
+    self.OverWorldX = ko.observable(data ? data.OverWorldX : 0);
+    self.OverWorldZ = ko.observable(data ? data.OverWorldZ : 0);
 
     self.NetherX = ko.computed(function () {
         return self.OverWorldX() / 8;
@@ -14,11 +14,11 @@ function FromOverWorldCoords() {
     self.Note = ko.observable("");
 }
 
-function FromNetherCoords() {
+function FromNetherCoords(data) {
     var self = this;
     self.OverWorld = ko.observable(false);
-    self.NetherX = ko.observable(0);
-    self.NetherZ = ko.observable(0);
+    self.NetherX = ko.observable(data ? data.NetherX : 0);
+    self.NetherZ = ko.observable(data ? data.NetherX : 0);
 
     self.OverWorldX = ko.computed(function () {
         return self.NetherX() * 8;
