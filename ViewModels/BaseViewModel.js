@@ -15,7 +15,7 @@ function BaseViewModel() {
     self.ShowBlog = self.ChangeContent("Blog", new BlogViewModel());
     self.ShowGymTracker = self.ChangeContent("GymTracker", new GymTrackerViewModel());
     self.ShowAdmin = self.ChangeContent("Admin", new AdminViewModel());
-    self.ShowBreakout = self.ChangeContent("Breakout");
+    self.ShowBreakout = self.ChangeContent("Breakout", new BreakoutViewModel());
     self.ShowNetherCalc = self.ChangeContent("NetherCalc", new NetherCalcViewModel());
     self.ShowRecipeTool = self.ChangeContent("RecipeTool");
 

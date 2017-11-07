@@ -74,9 +74,30 @@
         </div>
     </script>
 
+    <script type="text/html" id="BreakoutTemplate">
+        <style>
+            canvas {
+                border: 1px solid black;
+            }
+        </style>
+    
+        </head>
+    
+        <body>
+            <center>
+                <h1>Breakout</h1>
+                <canvas id="gameCanvas" width="800" height="600"></canvas>
+                <br>
+                <a class="btn btn-default" data-bind="click: RunGame"> Start at your own risk</a>
+            </center>
+        </body>
+    </script>
+
     <script type="text/html" id="BlogTemplate">
         <div class="content">
-            Test stuff goes in here
+            <h3>Welcome to my site.</h3>
+            <p> This site is 99% for me to have a place to link to my own projects and toot my own horn. 
+                If you found this by accident. I am sorry. If you found this on purpose, well feel free to peruse my incredible selection of one or two items.</p>
         </div>
     </script>
 
@@ -93,32 +114,62 @@
                         </div>
                         <ul class="nav navbar-nav">
                             <li data-bind="css: { active: Content().name == 'Blog'}">
-                                <a data-bind="click: ShowBlog">Blog</a>
+                                <a data-bind="click: ShowBlog">Home</a>
                             </li>
                             <!-- <li><a href="#">Page 1</a></li> -->
                             <li class="dropdown">
                                 <a class="dropdown-toggle" data-toggle="dropdown">
-                                    Projects
+                                    Miscellaneous Stuff
                                     <span class="caret"></span>
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li data-bind="css: { active: Content().name == 'GymTracker' }">
+                                    <!-- <li data-bind="css: { active: Content().name == 'GymTracker' }">
                                         <a data-bind="click: ShowGymTracker">Gym Tracker</a>
-                                    </li>
+                                    </li> -->
                                     <li data-bind="css: { active: Content().name == 'Breakout' }">
                                         <a data-bind="click: ShowBreakout">Breakout</a>
                                     </li>
                                     <li data-bind="css: { active: Content().name == 'NetherCalc' }">
                                         <a data-bind="click: ShowNetherCalc">Nether Calculator</a>
                                     </li>
-                                    <li data-bind="css: { active: Content().name == 'RecipeTool' }">
+                                    <!-- <li data-bind="css: { active: Content().name == 'RecipeTool' }">
                                         <a data-bind="click: ShowRecipeTool">Recipe Tool</a>
+                                    </li> -->
+                                </ul>
+                            </li>
+                            <!-- <li><a href="#">Page 1</a></li> -->
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown">
+                                    Github Projects
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="http://nhawdge.net/Adventure-Club">Adventure Club</a>
                                     </li>
                                 </ul>
                             </li>
-                            <li data-bind="css: { active: Content().name == 'Admin'}">
-                                <a data-bind="click: ShowAdmin"> Admin </a>
+
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown">
+                                    More
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="https://github.com/Nhawdge">My Github</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://stackoverflow.com/users/7314155/john-pavek">My Stack Overflow</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.linkedin.com/in/john-pavek-412320125/">My Linked In</a>
+                                    </li>
+                                </ul>
                             </li>
+                            <!-- <li data-bind="css: { active: Content().name == 'Admin'}">
+                                <a data-bind="click: ShowAdmin"> Admin </a>
+                            </li> -->
                         </ul>
                     </div>
                 </nav>
