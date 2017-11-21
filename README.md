@@ -1,2 +1,3 @@
 # nhawdge.github.io
-Why won't the readme go away?
+
+This is just my personal site. There is nothing special going on here.
