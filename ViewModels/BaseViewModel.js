@@ -19,6 +19,8 @@ function BaseViewModel() {
     self.ShowNetherCalc = self.ChangeContent("NetherCalc", new NetherCalcViewModel());
     self.ShowRecipeTool = self.ChangeContent("RecipeTool");
 
+    self.ShowModelMaker = self.ChangeContent("JsModel", new KoModelViewModel())
+
     self.Load = function () {
         self.ChangeContent("Blog");
 

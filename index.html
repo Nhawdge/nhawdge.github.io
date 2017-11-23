@@ -69,8 +69,24 @@
             </table>
             <a class="btn btn-default" data-bind="click: NewOverWorldRow"> Add New Overworld Row</a>
             <a class="btn btn-default" data-bind="click: NewNetherRow"> Add New Nether Row</a>
-            
+
             <a class="btn btn-default pull-right" data-bind="click: Save"> Save</a>
+        </div>
+    </script>
+
+    <script type="text/html" id="JsModelTemplate">
+        <div class="row">
+            <div class="col-sm-6">
+                <textarea class="form-control" rows="10" data-bind="value: Input, valueUpdate: 'afterkeydown'"></textarea>
+            </div>
+            <div class="col-sm-6">
+                <div data-bind="foreach: InputList">
+                    <span data-bind="text: $data"></span>
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <a class="btn btn-default pull-right" data-bind="click: ConvertInput"> Convert Input </a>
+            </div>
         </div>
     </script>
 
@@ -80,9 +96,9 @@
                 border: 1px solid black;
             }
         </style>
-    
+
         </head>
-    
+
         <body>
             <center>
                 <h1>Breakout</h1>
@@ -96,8 +112,9 @@
     <script type="text/html" id="BlogTemplate">
         <div class="content">
             <h3>Welcome to my site.</h3>
-            <p> This site is 99% for me to have a place to link to my own projects and toot my own horn. 
-                If you found this by accident. I am sorry. If you found this on purpose, well feel free to peruse my incredible selection of one or two items.</p>
+            <p> This site is 99% for me to have a place to link to my own projects and toot my own horn. If you found this by
+                accident. I am sorry. If you found this on purpose, well feel free to peruse my incredible selection of one
+                or two items.</p>
         </div>
     </script>
 
@@ -123,9 +140,9 @@
                                     <span class="caret"></span>
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <!-- <li data-bind="css: { active: Content().name == 'GymTracker' }">
-                                        <a data-bind="click: ShowGymTracker">Gym Tracker</a>
-                                    </li> -->
+                                    <li data-bind="css: { active: Content().name == 'ModelMaker' }">
+                                        <a data-bind="click: ShowModelMaker">JS Model Maker</a>
+                                    </li>
                                     <li data-bind="css: { active: Content().name == 'Breakout' }">
                                         <a data-bind="click: ShowBreakout">Breakout</a>
                                     </li>
@@ -188,9 +205,11 @@
 <script src="ViewModels/AdminViewModel.js"></script>
 <script src="ViewModels/BreakoutViewModel.js"></script>
 <script src="ViewModels/NetherCalcViewModel.js"></script>
+<script src="ViewModels/KoModelViewModel.js"></script>
 
 <script>
         ko.applyBindings(new BaseViewModel());
+
 </script>
 
 </html>
