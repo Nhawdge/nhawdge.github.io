@@ -1,56 +1,79 @@
-﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
+﻿/* 
+    VARIABLES 
+*/
 
-a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
-}
-
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  font-size: 14px;
-}
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+:root {
+    --main-bg-color: rgba(0, 75, 75, 0.75);
+    --text-color-on-bg: #FAFAFA;
 }
 
-.border-top {
-  border-top: 1px solid #e5e5e5;
-}
-.border-bottom {
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
-}
-
-button.accept-policy {
-  font-size: 1rem;
-  line-height: inherit;
-}
-
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  position: relative;
-  min-height: 100%;
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
+    background-color: rgba(0,0,0,0.20)
 }
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  /* Set the fixed height of the footer here */
-  height: 60px;
-  line-height: 60px; /* Vertically center the text there */
+
+/*
+    Header
+
+*/
+header {
+    text-align: center;
+    margin: auto;
+    padding-bottom: 25px;
 }
+
+    header nav a, details {
+        display: inline-block;
+        padding: 5px;
+        border-radius: 5px;
+        color: var(--text-color-on-bg);
+        background-color: var(--main-bg-color);
+        padding: 12px 10px;
+    }
+
+    header nav a {
+    }
+
+details ul {
+    border: solid black 3px;
+    border-radius: 5px;
+    position: absolute;
+    color: var(--text-color-on-bg);
+    background-color: var(--main-bg-color);
+    list-style: none;
+    padding: 5px;
+}
+
+    details ul li:not(:last-child) {
+        margin-bottom: 15px;
+    }
+
+/*  
+    Main
+*/
+
+main {
+    margin-bottom: 30px;
+    padding-bottom: 25px;
+    margin: auto;
+    max-width: 900px;
+}
+
+
+/*
+    footer
+*/
+
+footer {
+    bottom: 0px;
+    width: 90%;
+}
+
+    footer div {
+        text-align: center;
+        margin: auto;
+        position: relative;
+    }
