@@ -1,0 +1,26 @@
+{
+  "name": "nhawdge.net",
+  "version": "0.0.1",
+  "description": "John Pavek's Site",
+  "main": "src/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nhawdge/nhawdge.github.io.git"
+  },
+  "author": "John Pavek",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Nhawdge/nhawdge.github.io/issues"
+  },
+  "homepage": "https://github.com/Nhawdge/nhawdge.github.io#readme",
+  "gnaw": {
+    "components": [
+      "heading",
+      "footer",
+      "nav"
+    ]
+  }
+}
