@@ -7,7 +7,7 @@ body {
     grid-template:
         "header header" 175px
         "nav main" auto
-        "footer footer"auto;
+        "footer footer" auto;
     max-width: 850px;
     min-height: 100vh;
     margin: auto;
@@ -55,7 +55,9 @@ header ul a {
 }
 
 
-nav ul ul li {padding-left: 15px;}
+nav ul ul li {
+    padding-left: 15px;
+}
 
 footer {
     grid-area: footer;
@@ -75,9 +77,17 @@ footer {
 }
 
 html {
-    background-color: rgba(0,0,0,0.10);
+    background-color: rgba(0, 0, 0, 0.10);
 }
 
 main {
     padding: 10px;
+}
+
+nav>ul>li {
+    padding-bottom: 10px;
+}
+
+ul a , ul a:visited{
+    color: black;
 }
