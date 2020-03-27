@@ -1,4 +1,4 @@
-nav>ul {
+/* nav>ul {
     display: flex;
 }
 
@@ -28,4 +28,18 @@ nav ul>li:focus-within ul {
     transition: display ease-out 1s;
     display: table;
     width: 100%;
-} 
+}  */
+
+nav {
+    grid-area: nav;
+    border-right: solid 1px black;
+    margin-right: 10px;
+    padding-right: 10px;
+}
+
+nav li {
+    list-style: none;
+    padding: 0px;
+}
+
+footer {}

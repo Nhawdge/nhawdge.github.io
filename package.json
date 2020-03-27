@@ -19,6 +19,7 @@
   "gnaw": {
     "components": [
       "heading",
+      "head",
       "footer",
       "nav"
     ]
