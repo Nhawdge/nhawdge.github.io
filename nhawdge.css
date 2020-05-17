@@ -5,9 +5,7 @@
 body {
     display: grid;
     grid-template:
-        "header header" 175px
-        "nav main" auto
-        "footer footer" auto;
+        "header header"auto "nav main"auto "footer footer"auto;
     max-width: 850px;
     min-height: 100vh;
     margin: auto;
@@ -18,9 +16,10 @@ body {
 }
 
 
+
 h1 {
     font-size: 72px;
-    word-break: break-all;
+    word-break: break-word;
     font-weight: 800;
     margin: 0px;
     font-family: 'Playfair Display', serif;
@@ -67,9 +66,7 @@ header span {
     font-size: 28px;
 }
 
-nav ul {
-    padding: 0px;
-}
+
 
 footer {
     margin-top: 30px;
@@ -88,6 +85,52 @@ nav>ul>li {
     padding-bottom: 10px;
 }
 
-ul a , ul a:visited{
+ul a,
+ul a:visited {
     color: black;
+}
+
+nav ul {
+    padding: 0px;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        grid-template: "header  "
+            "nav"
+            "main"
+            "footer";
+    }
+
+    header {
+        grid-template-columns: 1fr;
+    }
+
+    ul.MyLinks {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    nav ul {
+        padding: 0px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    nav li li {
+        display: none;
+    }
+
+    nav li {
+        text-align: center;
+        font-size: 22px;
+        margin: auto;
+        border: none;
+    }
+
+    nav {
+        padding:0px;
+        border: none;
+        margin:0px;
+    }
 }
