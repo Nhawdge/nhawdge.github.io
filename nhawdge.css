@@ -113,7 +113,7 @@ img {
         grid-template-columns: 1fr;
     }
 
-    ul.MyLinks {
+    header ul {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
@@ -154,4 +154,13 @@ img {
     }
 
 
+}
+
+code {
+    display: block;
+    padding: 5px 20px;
+    font-family: consolas;
+    font-size: 14px;
+    background-color: rgba(0,0,0, 0.1);
+    margin: 5px;
 }
