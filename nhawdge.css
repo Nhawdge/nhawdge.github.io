@@ -94,6 +94,13 @@ nav ul {
     padding: 0px;
 }
 
+img {
+    max-width: 40%;
+    float: left;
+    margin: 15px;
+    border-radius: 25px;
+}
+
 @media only screen and (max-width: 600px) {
     body {
         grid-template: "header  "
@@ -129,8 +136,22 @@ nav ul {
     }
 
     nav {
-        padding:0px;
+        padding: 0px;
         border: none;
-        margin:0px;
+        margin: 0px;
     }
+
+    img {
+        max-width: 60%;
+        float: left;
+        margin: 10px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    img {
+        display: none;
+    }
+
+
 }
