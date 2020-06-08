@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<gnaw-head />
+
+<body>
+    <gnaw-heading />
+    <gnaw-nav />
+
+    <main>
+        <p>
+            I assume you're here to play my terrible blackjack game. 
+            <code>
+                deno run https://github.com/Nhawdge/deno-blackjack/raw/master/BlackJack.ts
+            </code>
+            or else you might be here to talk about the technicals?
+        </p>
+        <blockquote>
+            I learned about deno a couple months before it's 1.0 release, and I said to my coworker, We should have a
+            deno release party.
+            He immediately said no. Okay fine, so in a classic Bender-from-futurama move. I said, "Fine! I'll have my
+            own release party... with blackjack!"
+        </blockquote>
+        <p> This was my first project using Deno, but <a href="https://github.com/Nhawdge/ts-talk-2019"> I've used
+                typescript before</a>. I was really excited to learn this doesn't require setting up the TS compiler and
+            just lets you start quickly.
+            Early on I decided to try and 'over engineer' the project a bit and see what happens. I made a type for each
+            of the different pieces of a card. The Suite, Face, and blackjack value. I actually used union types for all
+            of these. I'll admit I was quite surprised with how useful this was. I had several errors caught before I
+            even ran my project. The deck generator had a lot of bugs the first couple times through, thankfully it
+            didn't have more.
+
+    </main>
+    <gnaw-footer />
+</body>
+
+</html>
